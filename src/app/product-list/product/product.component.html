@@ -1,0 +1,14 @@
+<div class="card mb-3 p-1 border border-warning" >
+    <div class="row">
+        <div class="col-3">
+            <img src="/assets/images/{{ sProduct.imageUrl }}" alt="" class="img-fluid rounded-start">
+        </div>
+        <div class="col-9">
+            <div class="card-body">
+                <h5 class="card-title">{{ sProduct.name }}</h5>
+                <p class="cart-text">{{ sProduct.description }}</p>
+                <button (click)="unselectProduct()" class="btn btn-primary">Seçimi Kaldır</button>
+            </div>
+        </div>
+    </div>
+</div>
