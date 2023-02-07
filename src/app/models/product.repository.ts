@@ -2,9 +2,11 @@ import { Product } from "./product";
 
 export class ProductRepository {
     private products : Product[] = [
-        { id: 1, name: "iphone 14", price: 20000, imageUrl: "1.jpeg", description: "iyi telefon", isActive: true },
-        { id: 2, name: "iphone 15", price: 30000, imageUrl: "2.jpeg", description: "iyi telefon", isActive: true },
-        { id: 3, name: "iphone 16", price: 40000, imageUrl: "3.jpeg", description: "iyi telefon", isActive: true }   
+        { id: 1, name: "iphone 14", price: 20000, imageUrl: "1.jpeg", description: "iyi telefon", isActive: true, categoryId:1 },
+        { id: 2, name: "iphone 15", price: 30000, imageUrl: "2.jpeg", description: "iyi telefon", isActive: true, categoryId:1 },
+        { id: 3, name: "iphone 16", price: 40000, imageUrl: "3.jpeg", description: "iyi telefon", isActive: true, categoryId:2 },   
+        { id: 4, name: "iphone 17", price: 50000, imageUrl: "3.jpeg", description: "iyi telefon", isActive: true, categoryId:2 },   
+        { id: 5, name: "iphone 18", price: 60000, imageUrl: "3.jpeg", description: "iyi telefon", isActive: true, categoryId:3 }   
     ];
 
     getProducts(): Product[] {
@@ -13,5 +15,9 @@ export class ProductRepository {
 
     getProductById(id: number) {
         return this.products.find(p=>p.id == id);
+    }
+
+    getProductsByCategory(id:number): Product[] {
+        return this.products.filter(p=> p.categoryId == id);
     }
 }
