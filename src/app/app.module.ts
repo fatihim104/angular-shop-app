@@ -7,7 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product-list/product/product.component';
 import { CategoryListComponent } from './category-list/category-list.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { ProductCreateComponent } from './product-create/product-create.component';
+import { CategoryCreateComponent } from './category-create/category-create.component'
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import {HttpClientModule} from '@angular/common/http'
     NavbarComponent,
     ProductListComponent,
     ProductComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    ProductCreateComponent,
+    CategoryCreateComponent
   ],
   imports: [
     BrowserModule,
