@@ -13,6 +13,10 @@ import { ProductService } from '../services/product.service';
 export class ProductCreateComponent implements OnInit {
 
   categories:Category[]=[];
+  model:any={
+    name:"Iphone 17",
+    categoryId: 0
+  };
 
   constructor(private productService:ProductService, 
     private categoryService:CategoryService,
@@ -23,18 +27,9 @@ export class ProductCreateComponent implements OnInit {
     this.categoryService.getCategories().subscribe(data => this.categories = data)
   }
 
-  saveProduct(name:any, price:any, imageUrl:any, description:any, isActive:any, categoryId:any){
-    const newProduct={
-      id:null,
-      name: name.value, 
-      price: price.value, 
-      imageUrl: imageUrl.value, 
-      description: description.value, 
-      isActive: isActive.checked, 
-      categoryId:categoryId.value 
-    }
-
-    this.productService.createProduct(newProduct).subscribe(result => this.route.navigate(['/products']));
+  saveProduct(){
+  console.log(this.model)
+    // this.productService.createProduct(newProduct).subscribe(result => this.route.navigate(['/products']));
 
 
   }
