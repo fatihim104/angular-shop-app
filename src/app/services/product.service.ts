@@ -6,7 +6,7 @@ import { Product } from "../models/product";
 @Injectable()
 export class ProductService {
 
-    private url ="https://shop-api-7dd4e-default-rtdb.europe-west1.firebasedatabase.app/";
+    private url ="https://shop-apim-default-rtdb.europe-west1.firebasedatabase.app/";
     
     constructor(private http:HttpClient){
 

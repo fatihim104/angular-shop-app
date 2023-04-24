@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { CategoryCreateComponent } from './category-create/category-create.component'
 import { FormsModule } from '@angular/forms';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     CategoryListComponent,
     ProductCreateComponent,
-    CategoryCreateComponent
+    CategoryCreateComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
